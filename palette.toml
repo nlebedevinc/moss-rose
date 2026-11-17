@@ -1,0 +1,89 @@
+# Moss Rose: the single source of truth for every port.
+# Edit a value here, run `python3 tools/build.py`, and every app picks it up.
+#
+# The recipe, for both variants:
+#   - Canvas and chrome follow Vitesse: a neutral background, flat borderless
+#     surfaces, one green accent.
+#   - Syntax hues follow Rosé Pine: love / gold / rose / foam / iris, with Rosé
+#     Pine's "pine" slot (keywords) handed to Vitesse's green.
+#   - The accents are held to one narrow band of brightness and saturation, a
+#     step quieter than the text, so no single hue dominates.
+#   - Red is the exception and is reserved for errors and deletions.
+
+# ── Dark ─────────────────────────────────────────────────────────────────────
+# Vitesse Black's canvas. Accents sit at OKLCH L 0.70-0.77, C 0.055-0.08.
+
+[[theme]]
+variant = "dark"
+name = "Moss Rose"
+slug = "moss-rose"
+
+[theme.colors]
+# surfaces
+base    = "#000000"  # editor and terminal background (Vitesse Black)
+surface = "#121212"  # inputs, current line, hovered rows (Vitesse Black)
+overlay = "#141414"  # popups, floating windows
+border  = "#191919"  # hairlines between flat panels (Vitesse)
+line    = "#262626"  # separators that must stay visible (splits, guides)
+hl_med  = "#1e1e1e"  # selected rows
+hl_high = "#303030"  # scrollbar thumbs, ANSI black
+select  = "#172c23"  # selection: pine at 30% over base
+# text
+text    = "#c3c0b4"  # Vitesse's warm white, dimmed
+soft    = "#b3b0a4"  # sidebar, status bar, title bar (as Vitesse: near text)
+subtle  = "#8c8c7f"  # punctuation, operators, inactive tabs
+muted   = "#6d7d6d"  # comments: Vitesse's green-grey
+faint   = "#4e4f49"  # line numbers, inactive, ignored
+# accents
+love    = "#c26e6d"  # errors and deletions only, never plain syntax
+gold    = "#b59f6f"  # strings, numbers, warnings
+rose    = "#cc9ba2"  # functions, booleans, this/self
+foam    = "#82b4bf"  # types, tags, keys in data files
+iris    = "#9d8db4"  # parameters, attributes
+leaf    = "#5da07a"  # keywords: Vitesse green, lifted for text contrast
+pine    = "#4d9375"  # UI accent: Vitesse's primary green, unchanged
+sky     = "#5b8cb6"  # info, modified files, links, ANSI blue
+
+# Bright ANSI colors (9-15): mostly the unmodified Rosé Pine accents.
+[theme.bright]
+love = "#eb817f"
+leaf = "#7bbfa1"
+gold = "#f6c177"
+sky  = "#82acd1"
+iris = "#c4a7e7"
+foam = "#9ccfd8"
+text = "#dbd7ca"
+
+# ── Light ────────────────────────────────────────────────────────────────────
+# Vitesse Light's canvas, text and greens. Rosé Pine Dawn's own accent values
+# are too pale for white (its gold is 2.2:1), so each hue is darkened into one
+# band of 4.5-6.4:1, a step lighter than the text. Bright ANSI colors repeat
+# the normal ones, since brighter means less readable on white.
+
+[[theme]]
+variant = "light"
+name = "Moss Rose Light"
+slug = "moss-rose-light"
+
+[theme.colors]
+base    = "#ffffff"  # Vitesse Light
+surface = "#f7f7f7"  # Vitesse Light
+overlay = "#fbfbfb"
+border  = "#f0f0f0"  # Vitesse Light
+line    = "#e2e2e2"
+hl_med  = "#eeeeee"
+hl_high = "#dddddd"
+select  = "#dbe7e2"  # pine at 16% over base
+text    = "#393a34"  # Vitesse Light
+soft    = "#4e4f47"  # Vitesse Light
+subtle  = "#706f68"
+muted   = "#748374"  # Vitesse's green-grey, darkened from 2.3:1 to 4.0:1
+faint   = "#acaba6"
+love    = "#ae3c36"
+gold    = "#946a2b"
+rose    = "#a75e7c"
+foam    = "#3d808c"
+iris    = "#725d99"
+leaf    = "#1e754f"  # Vitesse Light's keyword green, unchanged
+pine    = "#1c6b48"  # Vitesse Light's primary green, unchanged
+sky     = "#2d6198"
