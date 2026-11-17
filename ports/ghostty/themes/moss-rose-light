@@ -1,0 +1,26 @@
+# Moss Rose Light: Rosé Pine syntax hues on a Vitesse canvas.
+# Generated from palette.toml by tools/build.py.
+
+palette = 0=#393a34
+palette = 1=#ae3c36
+palette = 2=#1e754f
+palette = 3=#946a2b
+palette = 4=#2d6198
+palette = 5=#725d99
+palette = 6=#3d808c
+palette = 7=#706f68
+palette = 8=#748374
+palette = 9=#ae3c36
+palette = 10=#1e754f
+palette = 11=#946a2b
+palette = 12=#2d6198
+palette = 13=#725d99
+palette = 14=#3d808c
+palette = 15=#acaba6
+
+background = #ffffff
+foreground = #393a34
+cursor-color = #1c6b48
+cursor-text = #ffffff
+selection-background = #dbe7e2
+selection-foreground = #393a34
