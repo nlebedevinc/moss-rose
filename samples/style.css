@@ -1,0 +1,26 @@
+@import url("fonts.css");
+
+:root {
+  --base: #000000;
+  --pine: #4d9375;
+  --radius: 0.5rem;
+}
+
+/* Flat panels, hairline borders. */
+.panel,
+nav > button:not([disabled]) {
+  background: var(--base);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: calc(var(--radius) * 2);
+  font: 500 13px/1.6 "DM Mono", monospace;
+  transition: color 120ms ease-in-out;
+}
+
+#switch button[aria-pressed="true"]::after {
+  content: "•";
+  color: var(--pine) !important;
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: clamp(2rem, 8vw, 3rem); margin: 0 auto; }
+}

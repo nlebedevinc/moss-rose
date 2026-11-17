@@ -1,0 +1,16 @@
+diff --git a/build.py b/build.py
+index 3f1c2aa..9be04d7 100644
+--- a/build.py
++++ b/build.py
+@@ -40,9 +40,9 @@ PALETTES = {
+         # accents
+-        "love":     "#d2748c",
+-        "gold":     "#d8b079",
++        "love":     "#c26e6d",  # errors and deletions only
++        "gold":     "#b59f6f",
+         "rose":     "#cc9ba2",
+         "foam":     "#82b4bf",
+@@ -88,6 +88,7 @@ def ghostty() -> str:
+     lines += [f"palette = {i}={c}" for i, c in enumerate(ANSI)]
++    lines.append("")
+     return "\n".join(lines)

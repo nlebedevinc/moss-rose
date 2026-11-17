@@ -1,0 +1,25 @@
+name: build
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  PYTHON_VERSION: "3.12"
+  STRICT: true
+
+jobs:
+  themes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      # Regenerate and fail if anything changed.
+      - name: Build
+        run: |
+          python3 build.py
+          git diff --exit-code

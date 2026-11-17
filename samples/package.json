@@ -1,0 +1,18 @@
+{
+  "name": "moss-rose",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Rosé Pine syntax hues on a Vitesse canvas.",
+  "engines": { "vscode": "^1.80.0" },
+  "contributes": {
+    "themes": [
+      { "label": "Moss Rose", "uiTheme": "vs-dark", "path": "./themes/moss-rose-color-theme.json" },
+      { "label": "Moss Rose Light", "uiTheme": "vs", "path": "./themes/moss-rose-light-color-theme.json" }
+    ]
+  },
+  "keywords": ["theme", "dark", "light"],
+  "retries": 3,
+  "ratio": 4.5,
+  "publish": false,
+  "icon": null
+}

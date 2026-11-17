@@ -1,0 +1,17 @@
+# Terminal and editor settings
+title = "Moss Rose"
+variants = ["dark", "light"]
+
+[font]
+family = "DM Mono"
+size = 13.5
+ligatures = false
+
+[window]
+padding = { x = 12, y = 10 }
+opacity = 1.0
+started = 2026-11-16T10:42:00Z
+
+[[keybind]]
+key = "ctrl+shift+,"
+action = "reload_config"
